@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://heliks.ddns.net/favicon.ico" />
+    <link rel="icon" href="https://heliks.ddns.ner/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="shortcut icon" type="image/x-icon" href="https://heliks.ddns.net/favicon.ico" />
+    <link rel="icon" href="https://heliks.ddns.ner/favicon.ico" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Zamok</title>
+</head>
+<body>
+    <div class="container">
+        <form action="login.php" method="POST" id="form_auto">
+            <label for="form" class="action">Вход</label>
+            <label for="login">Логин</label>
+            <input name="login" type="text" placeholder="example@gmail.com" id="log_for_log" required>
+            <br>
+            <label for="password">Пароль</label>
+            <input name="password" type="password" id="pass_for_log" required>
+            <br>
+            <!--<input type="button" value="Отправить" class="btn" id="btn_for_log">-->
+            <button type="submit" class="btn" id="btn_for_log">Отправить</button>
+            <input type="button" value="Нет аккаунта? Создайте" class="log" id="reg_window">
+        </form>
+        <form action="registration.php" method="POST" id="form_reg">
+            <label for="form" class="action">Регистрация</label>
+            <label for="login">Логин</label>
+            <input name="login" type="text" placeholder="example@gmail.com" class="log_in" id="log_for_reg" required>
+            <br>
+            <label for="password">Пароль</label>
+            <input name="password" type="password" id="pass_for_reg" required>
+            <br>
+            <!--<input type="button" value="Зарегистрироваться" class="btn" id="btn_for_reg">-->
+            <button type="submit" class="btn" id="btn_for_reg">Зарегистрироваться</button>
+            <input type="button" value="Есть аккаунт? Войдите" class="log" id="log_window">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

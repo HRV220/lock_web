@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^212.57.126.83$
+RewriteRule ^(.*)$ https://heliks.ddns.net/$1 [L,R=301]
