@@ -40,6 +40,8 @@
 <body>
 <h2>Список пользователей</h2>
 <?php
+session_start();
+if($_SESSION['key_admin']==2212){
 $conn = mysqli_connect("localhost", "phpmyadmin", "raspberry1", "zamok_bd");
 if($conn->connect_error){
     echo "error";
@@ -78,7 +80,8 @@ else
     echo "nope";
     echo "Ошибка: " . $conn->error;
 }
-$conn->close();
+$conn->close();}
+else { header('Location: /index.html');}
 ?>
 </body>
 </html>

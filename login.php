@@ -1,4 +1,4 @@
-0;32;53M0;32;53m
+
 <?php
 session_start();
 if (!empty($_POST)) {
@@ -13,9 +13,11 @@ if (!empty($_POST)) {
         setcookie('login', $login, 0, '/');
         setcookie('password', $password, 0, '/');
 	if($arr[1]){
-            header('Location: /index.php');}
+	    $_SESSION['key_admin'] = 2212;
+            header('Location: index.php');}
 	else{ 
-		header('Location: /user.php');}
+	    $_SESSION['key_user']=2210;
+	    header('Location: /user.php');}
     } else {
         header('Location: /index.html');       
     }
